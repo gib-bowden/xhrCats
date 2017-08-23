@@ -1,0 +1,24 @@
+var cats = [
+ {name: "sammy" ,color: "red", url: "https://vignette2.wikia.nocookie.net/animal-jam-clans-1/images/b/b2/Red_cat.jpg/revision/latest?cb=20170619012603" },
+ {name: "ralphy" ,color: "green" , url: "http://i.dailymail.co.uk/i/pix/2014/12/12/2400149500000578-2871954-Return_Bulgaria_s_green_cat_has_finally_reappeared_after_vanishi-a-38_1418413395791.jpg"},
+ {name: "johnny" ,color: "blue", url: "https://s-media-cache-ak0.pinimg.com/564x/60/34/d4/6034d405ca86517845147c3512a89e9a.jpg"},
+ {name: "steve" ,color: "indigo", url: "https://vignette2.wikia.nocookie.net/animefangirl/images/9/92/Purple_cat.jpg/revision/latest?cb=20140624050744"}
+]
+
+var catContainer = document.getElementById("cats-container");
+
+function domString(arr) {
+	var domString = ""
+	if (arr !== []) {
+		for (let [i, item] of arr.entries()) {
+			domString +=	`<div class="cat-card" id="card-${i}">
+								<h1>${item.name}</h1>
+								<h3>${item.color}</h3>
+								<img src="${item.url}">
+							</div>`;
+		} 
+		catContainer.innerHTML = domString;
+	}
+}
+
+domString(cats);

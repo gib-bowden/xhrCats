@@ -1,0 +1,35 @@
+body {
+	background-color: #F1F0F0;
+	text-align: center;
+}
+
+#main {
+	width: 80%;
+	margin: 5% auto auto auto;
+}
+
+#cats-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	margin-top: 5%;
+	margin-bottom: auto;
+	height: 100%;
+}
+.cat-card {
+	background-color: white ;
+	height: auto;
+	width: 40%;
+	box-shadow: 2px 2px grey;
+	margin: 20px 20px 20px 0;
+}
+
+h2 {
+	text-align: center;
+}
+
+.cat-card img {
+	width: 70%;	
+
+}
