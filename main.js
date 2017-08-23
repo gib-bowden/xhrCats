@@ -14,8 +14,22 @@ function domString(arr) {
 	}
 }
 
-domString(cats);
+// domString(cats);
 
-domString(dogs);
+function doThisAfterFileLoads(){
+	console.log("this", this.responseText);
+	var data = JSON.parse(this.responseText);
+	console.log("data", data);
+	domString(data.cats);
+}
 
-domString(monkeys); 
+function doThisIfLoadFails(){
+	console.log("shit broke")
+}
+
+
+var myRequest = new XMLHttpRequest();
+myRequest.addEventListener("load", doThisAfterFileLoads)
+myRequest.addEventListener("error", doThisIfLoadFails)
+myRequest.open("GET", "cats.json")
+myRequest.send();

@@ -12,15 +12,17 @@ body {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	align-items: flex-start;
-	margin-top: 5%;
-	margin-bottom: auto;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+/*	margin-top: 5%;
+	margin-bottom: auto;*/
 	height: 100%;
 }
 .cat-card {
 	background-color: white ;
 	height: auto;
-	width: 40%;
+	width: 50%;
 	box-shadow: 2px 2px grey;
 	margin: 20px 20px 20px 0;
 }
